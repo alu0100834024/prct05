@@ -1,0 +1,18 @@
+#!/usr/bin/python
+subintervalos=int(raw_input('Introduzca el numero de intervalos(n>0): '))
+suma=0.0
+for i in range(1,subintervalos+1):
+  a = float((i -1)/subintervalos)
+  b = float(i/subintervalos)
+  print'Subintervalos:[%f,%f]' %(a,b)
+  x=(i-0.5)/float(subintervalos)
+  print 'El valor de x_i es: %f' %x
+  y=4/(1+x**2)
+  print 'El valor de fx_i es: %f' %y
+  suma=suma+y
+pi=(1.0/int(subintervalos))*suma
+print 'El valor aproximado de pi es: pi= %.8f' %pi
+
+PI=3.1415926535897931159979634685441852
+print 'El valor de Pi con 35 decimales es: PI= %.35f' %PI
+
